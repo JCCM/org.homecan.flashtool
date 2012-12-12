@@ -54,7 +54,7 @@ public class BootloaderMsg {
 	}
 		
 	public DatagramPacket getPacket() {
-		byte[] buffer = new byte[8];
+		byte[] buffer = new byte[data.length+4];
 		buffer[0] = id.byteValue();
 		buffer[1] = type.byteValue();
 		buffer[2] = msgNumber.byteValue();
